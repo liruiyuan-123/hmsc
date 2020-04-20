@@ -7,4 +7,4 @@ env
 *.db 
 node_modules
 hmsc
-
+.idea
