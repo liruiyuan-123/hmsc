@@ -1,6 +1,4 @@
 from application import app
+from web.controllers.user.User import router_user
 
-@app.route('/index')
-
-def index():
-    return "hello"
+app.register_blueprint(router_user,url_prefix="/user")
