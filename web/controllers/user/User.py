@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint,render_template
 
 router_user = Blueprint('user_page',__name__)
 
@@ -6,10 +6,10 @@ router_user = Blueprint('user_page',__name__)
 @router_user.route("/register")
 def register():
     return '注册'
-
+# 登录
 @router_user.route("/login")
 def login():
-    return '登录'
+    return render_template("user/login.html")
 
 @router_user.route("/logout")
 def logout():
