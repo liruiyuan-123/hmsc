@@ -1,10 +1,6 @@
-.vscode 
-*.pyc 
-*~ 
-__pycache__ 
-env 
-.env 
-*.db 
-node_modules
-hmsc
+*.pyc
+*~
+__pycache__
+env
 .idea
+.vscode

@@ -9,7 +9,6 @@ class Applciation(Flask):
         self.config.from_pyfile('config/base_setting.py')
         db.init_app(self)
 
-# print(os.environ['ops_config'])
 db = SQLAlchemy()
 app = Applciation(__name__,template_folder=os.getcwd()+'/web/templates/',root_path=os.getcwd())
 manager = Manager(app)

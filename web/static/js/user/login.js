@@ -6,21 +6,19 @@ var user_login_ops = {
     eventBind:function(){
         $(".login_wrap .do-login").click(function(){
             var btn_target = $(this)
-            if (btn_target.hasClass("disabled")){
-                alert("请求正在处理，请稍后重试")
+            if (btn_target.hasClass("disabled")) {
+                alert("请求正在处理，请稍后再试~~~")
                 return;
             }
             var login_name = $(".login_wrap input[name=login_name]").val()
             var login_pwd = $(".login_wrap input[name=login_pwd]").val()
-            
-            console.log(login_name)
-            console.log(login_pwd)
+
             // 前端校检
-            if (login_name == undefined || login_name.length <1){
+            if (login_name == undefined || login_name.length < 1){
                 alert('请输入正确的用户名')
                 return
             }
-            if (login_pwd == undefined || login_pwd.length <1){
+            if (login_pwd == undefined || login_pwd.length < 1){
                 alert('请输入正确的密码')
                 return
             }
@@ -32,10 +30,10 @@ var user_login_ops = {
                 type:"POST",
                 data:{'login_name':login_name,'login_pwd':login_pwd},
                 dataType:'json',
-                success:function(res){
+                success:function(resp){
                     btn_target.removeClass("disabled");
-                    console.log(res)
-                    alert(res.msg)
+                    console.log(resp)
+                    alert(resp.msg)
                 },
                 error:function(error){
                     console.log(error)
@@ -44,6 +42,8 @@ var user_login_ops = {
         })
     }
 }
+
+
 $(document).ready(function(){
     user_login_ops.init();
 })

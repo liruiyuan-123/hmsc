@@ -1,3 +1,3 @@
 DEBUG = True
-SQLALCHEMY_DATABASE_URI = 'mysql://root:123456@192.168.0.101/hmsc_db?charset=utf8'
+SQLALCHEMY_DATABASE_URI = 'mysql://root:123456@192.168.0.104/hmsc_db?charset=utf8'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
