@@ -34,6 +34,8 @@ var user_login_ops = {
                     btn_target.removeClass("disabled");
                     console.log(resp)
                     alert(resp.msg)
+                    // 解决登录成功无法跳转的问题
+                    window.location.reload()
                 },
                 error:function(error){
                     console.log(error)
